@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organograma AXYN</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div id="container-organograma">
+        </div>
+
+    <button class="btn-flutuante" onclick="abrirModal()">+ Novo Cadastro</button>
+
+    <div id="modal-cadastro" class="modal oculta">
+        <div class="modal-conteudo">
+            <h2>Cadastrar Colaborador</h2>
+            <form id="form-cadastro">
+                
+                <div class="grupo-input">
+                    <label>Nome Completo</label>
+                    <input type="text" id="input-nome" placeholder="Ex: Marçal Müller" required>
+                </div>
+
+                <div class="linha-dupla">
+                    <div class="grupo-input">
+                        <label>Cargo</label>
+                        <input type="text" id="input-cargo" placeholder="Ex: Diretor" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label>Inscrição / ID</label>
+                        <input type="text" id="input-inscricao" placeholder="000">
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label>Líder Direto</label>
+                    <select id="input-chefe">
+                        <option value="">Sem Líder (Topo)</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label>E-mail Corporativo</label>
+                    <input type="email" id="input-email" placeholder="email@ramarim.com.br">
+                </div>
+
+                <div class="linha-dupla">
+                    <div class="grupo-input">
+                        <label>Celular</label>
+                        <input type="text" id="input-celular" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="grupo-input">
+                        <label>URL da Foto</label>
+                        <input type="text" id="input-foto" placeholder="https://...">
+                    </div>
+                </div>
+
+                <div class="linha-dupla">
+                    <div class="grupo-input">
+                        <label>Nascimento</label>
+                        <input type="date" id="input-nascimento">
+                    </div>
+                    <div class="grupo-input">
+                        <label>Admissão</label>
+                        <input type="date" id="input-admissao">
+                    </div>
+                </div>
+
+                <div class="botoes-modal">
+                    <button type="button" class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+                    <button type="submit" class="btn-salvar">Salvar Colaborador</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
